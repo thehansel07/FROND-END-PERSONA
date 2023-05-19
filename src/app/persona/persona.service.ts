@@ -11,7 +11,7 @@ import { Persona } from './persona';
 })
 export class PersonaService {
 
-  private apiURL = "http://hansel-001-site1.atempurl.com/api";
+  private apiURL = "https://apipersona07.azurewebsites.net/api";
 
   httpOptions = {
     headers: new HttpHeaders({
