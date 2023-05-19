@@ -1,0 +1,171 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-black bg-dark">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" href="https://mdbgo.com/">
+        <img
+          src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.webp"
+          height="16"
+          alt=""
+          loading="lazy"
+          style="margin-top: -1px"
+        />
+      </a>
+  
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color:white">Dashboard</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+  
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+
+
+
+<div class="container">
+    <h1>Editar Persona</h1>
+   
+    <a href="#" routerLink="/persona/index" class="btn btn-primary">Volver</a>
+         
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input
+                formControlName="nombre"
+                id="nombre"
+                type="text"
+                [(ngModel)]="persona.nombre"
+                class="form-control"
+                >
+            <div *ngIf="f['nombre'].touched && f['nombre'].invalid" class="alert alert-danger">
+                <div *ngIf="f['nombre'].errors && f['nombre'].errors['required']">Nombre es un campo requerido</div>
+            </div>
+        </div>
+   
+        <div class="form-group">
+            <label for="fechaNacimiento">Fecha De Nacimiento</label>
+            <input
+            formControlName="fechaNacimiento"
+            id="fechaNacimiento"
+            type="datetime-local"
+            [(ngModel)]="persona.fechaNacimiento"
+            class="form-control">
+            <div *ngIf="f['fechaNacimiento'].touched && f['fechaNacimiento'].invalid" class="alert alert-danger">
+                <div *ngIf="f['fechaNacimiento'].errors && f['fechaNacimiento'].errors['required']">Fecha De Nacimiento es un campo requerido</div>
+            </div>
+        </div>
+   
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>
+<br><br><br><br><br> <br><br><br><br><br>
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted">
+    <!-- Section: Social media -->
+    <section
+      class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+      <!-- Left -->
+      <div class="me-5 d-none d-lg-block">
+        <span style="color: white;">Prueba tecnica Banreserva:</span>
+      </div>
+      <!-- Left -->
+  
+      <!-- Right -->
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f" ></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+  
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white;">
+              <i class="fas fa-gem me-3" style="color: white;"></i>Creado Por
+            </h6>
+            <p style="color: white;">
+              Hansel Cabrera Espinal
+            </p>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4" style="color: white;">
+              Tecnolologias Utilizadas:
+            </h6>
+            <p style="color: white;">
+              <a href="#!" class="text-reset">Angular 13</a>
+            </p>
+            <p style="color: white;">
+              <a href="#!" class="text-reset">ASP .NET CORE 5</a>
+            </p>
+            
+          </div>
+  
+  
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="#">FrondEnd-Persona</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+  
